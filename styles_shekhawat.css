@@ -69,7 +69,7 @@ h1, h2 {
 /* --- Hero Section --- */
 .hero-section {
     /* Placeholder - Replace this with your high-res image */
-    background: url('hero-corporate-bg.jpg') no-repeat center center/cover;
+    background: url('assets/1000115155.jpg') no-repeat center center/cover;
     background-color: var(--royal-blue); /* Fallback/Overlay */
     height: 90vh;
     display: flex;
@@ -243,11 +243,27 @@ h1, h2 {
     }
 
     .sector-item {
-        flex: 0 0 calc(50% - 15px); /* 2 items per row on mobile */
     }
 
     .footer-grid {
         flex-direction: column;
         text-align: center;
     }
+}
+/* --- Sector Link Styling (styles_shekhawat.css) --- */
+.sector-link {
+    text-decoration: none; /* Link underline hatane ke liye */
+    color: inherit; /* Text color ko parent se inherit karne ke liye */
+    display: block; /* Poore box par click ho sake iske liye */
+    flex: 0 0 calc(20% - 24px); /* Sector item ke width ke barabar */
+    max-width: 250px;
+}
+
+/* Aur yeh zaroor karein: Sector-item ko flex item banana */
+.sector-item {
+    /* Sector-item ki flex property hatakar */
+    /* flex: 0 0 calc(20% - 24px); */
+    /* Yeh properties hata dein, kyunki ab yeh parent link mein ja chuki hain. */
+    
+    /* Baki ki styling (padding, box-shadow, hover, wagera) same rahegi. */
 }
