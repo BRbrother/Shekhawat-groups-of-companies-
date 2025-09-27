@@ -1,1 +1,0 @@
-# Shekhawat-groups-of-companies-
