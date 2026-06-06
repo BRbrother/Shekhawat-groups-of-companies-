@@ -355,5 +355,28 @@ h2{
 section{
     padding:60px 0;
 }
+.stats{
+    background:#081627;
+    padding:80px 0;
+}
 
+.stats .container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+}
+
+.stat-box{
+    text-align:center;
+}
+
+.stat-box h2{
+    color:#d4af37;
+    font-size:3rem;
+}
+
+.stat-box p{
+    color:white;
+    font-size:1.1rem;
+}
 }
