@@ -1,315 +1,355 @@
-/* --- Global Styles & Root Variables --- */
-:root {
-    /* Define Royal Blue and Golden Colors */
-    --royal-blue: #0A3D62; /* Deep Blue for Primary Background/Text */
-    --golden-accent: #FFD700; /* Pure Golden color */
-    --light-blue-accent: #1C5D99; /* Lighter blue for CTAs/Hover */
-    --background-light: #F8F9FA; /* Off-white for clean sections */
-    --text-color-dark: #333333;
-    --text-color-light: #FFFFFF;
+/* =========================
+GLOBAL STYLES
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+html{
+scroll-behavior:smooth;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+body{
+font-family:'Poppins',sans-serif;
+background:#f8f9fc;
+color:#222;
+line-height:1.6;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-body {
-    background-color: var(--background-light);
-    color: var(--text-color-dark);
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-}
-h1 {
-  font-size: 2.2rem;
-}
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-h1, h2 {
-    font-family: 'Playfair Display', serif;
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
 }
 
-/* --- Header & Navigation --- */
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 5%;
-    background-color: var(--royal-blue);
-    color: var(--text-color-light);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+section{
+padding:80px 0;
 }
 
-.logo {
-    font-size: 1.8em;
-    font-weight: 700;
-    letter-spacing: 1px;
+h1,h2,h3{
+font-weight:700;
 }
 
-.golden-text {
-    color: var(--golden-accent);
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#0b1f3a;
+font-size:2.2rem;
 }
 
-.main-nav a {
-    text-decoration: none;
-    color: var(--text-color-light);
-    margin-left: 30px;
-    font-weight: 500;
-    transition: color 0.3s;
+/* =========================
+HEADER
+========================= */
+
+.header{
+background:#081627;
+padding:18px 0;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
-.main-nav a:hover {
-    color: var(--golden-accent);
+.header .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.utility-icons i {
-    font-size: 1.2em;
-    cursor: pointer;
-    margin-left: 20px;
-    color: var(--text-color-light);
+.logo h2{
+color:#d4af37;
+margin:0;
+font-size:1.8rem;
 }
 
-/* --- Hero Section --- */
-.hero-section {
-    /* Placeholder - Replace this with your high-res image */
-    background: url('assets/1000115155.jpg') no-repeat center center/cover;
-    background-color: var(--royal-blue); /* Fallback/Overlay */
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    /* Adding a dark blue overlay for text readability */
-    box-shadow: inset 0 0 0 1000px rgba(10, 61, 98, 0.6); 
-    color: white;
+nav ul{
+list-style:none;
+display:flex;
+gap:30px;
 }
 
-.hero-content {
-    max-width: 900px;
-    padding: 20px;
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
 }
 
-.main-heading {
-    font-size: 4em;
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+nav ul li a:hover{
+color:#d4af37;
 }
 
-.tagline {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: var(--golden-accent); /* Tagline in Golden */
-    margin-bottom: 40px;
+/* =========================
+HERO
+========================= */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(8,22,39,.75),
+rgba(8,22,39,.75)),
+url('assets/hero-banner.jpg');
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 14px 40px;
-    background-color: var(--golden-accent);
-    color: var(--royal-blue);
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 5px;
-    letter-spacing: 0.5px;
-    transition: background-color 0.3s, transform 0.2s;
+.hero-content{
+color:white;
 }
 
-.cta-button:hover {
-    background-color: #DAA520; /* Slightly darker gold */
-    transform: translateY(-2px);
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
 }
 
-/* --- Sector Spotlight Section --- */
-.sectors-section {
-    padding: 80px 5%;
-    text-align: center;
-}
-.section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.tagline{
+font-size:1.4rem;
+margin-bottom:35px;
+color:#d4af37;
 }
 
-.section > div {
-  flex: 1 1 300px;
-  margin: 10px;
-}
-.sectors-section h2 {
-    font-size: 2.5em;
-    color: var(--royal-blue);
-    margin-bottom: 60px;
-}
-
-.sector-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+.btn{
+display:inline-block;
+background:#d4af37;
+color:#081627;
+padding:14px 35px;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+transition:.3s;
 }
 
-.sector-item {
-    flex: 0 0 calc(20% - 24px); /* 5 items per row, accommodating gap */
-    max-width: 250px;
-    background-color: white;
-    padding: 30px 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-    border-bottom: 4px solid transparent; /* for effect */
-    min-height: 250px;
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 
-.sector-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    border-bottom-color: var(--golden-accent); /* Golden line on hover */
+/* =========================
+ABOUT
+========================= */
+
+.about{
+background:white;
+text-align:center;
 }
 
-.golden-icon {
-    font-size: 3em;
-    color: var(--golden-accent);
-    margin-bottom: 15px;
+.about p{
+max-width:850px;
+margin:auto;
+font-size:1.1rem;
 }
 
-.sector-item h3 {
-    color: var(--royal-blue);
-    margin-bottom: 10px;
-    font-weight: 600;
+/* =========================
+FOUNDER
+========================= */
+
+.founder{
+background:#0b1f3a;
+color:white;
+text-align:center;
 }
 
-.sector-item p {
-    font-size: 0.9em;
-    color: #666;
+.founder h2{
+color:#d4af37;
 }
 
-/* --- Footer --- */
-.main-footer {
-    background-color: var(--royal-blue);
-    color: var(--text-color-light);
-    padding: 50px 5% 20px;
+.founder p{
+max-width:850px;
+margin:auto;
+font-size:1.1rem;
 }
 
-.footer-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid var(--light-blue-accent);
-    padding-bottom: 30px;
+.founder h3{
+margin-top:30px;
+color:#d4af37;
 }
 
-.footer-col h4 {
-    color: var(--golden-accent);
-    margin-bottom: 15px;
-    font-weight: 600;
-    font-size: 1.2em;
+.founder span{
+opacity:.8;
 }
 
-.footer-col p,
-.footer-col a {
-    color: white;
-    text-decoration: none;
-    margin-bottom: 8px;
-    font-weight: 300;
-    display: block;
+/* =========================
+SECTORS
+========================= */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.social-icons i {
-    font-size: 1.4em;
-    margin-right: 15px;
-    cursor: pointer;
-    transition: color 0.3s;
+.card{
+background:white;
+padding:35px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 4px 20px rgba(0,0,0,.08);
+transition:.3s;
 }
 
-.social-icons i:hover {
-    color: var(--golden-accent);
+.card:hover{
+transform:translateY(-8px);
 }
 
-.copyright {
-    text-align: center;
-    font-size: 0.8em;
-    padding-top: 15px;
-    color: rgba(255, 255, 255, 0.7);
+.card i{
+font-size:2.5rem;
+color:#d4af37;
+margin-bottom:15px;
 }
 
-/* --- Basic Responsiveness --- */
-@media (max-width: 1200px) {
-    .sector-item {
-        flex: 0 0 calc(33.33% - 20px); /* 3 items per row on tablets/laptops */
-    }
-}
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.6rem;
-    text-align: center;
-  }
-
-  p {
-    font-size: 0.95rem;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card, .section > div {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-}
-@media (max-width: 768px) {
-    .main-nav {
-        display: none; /* Hide navigation on small screens */
-    }
-    
-    .hero-content .main-heading {
-        font-size: 2.5em;
-    }
-    
-    .hero-content .tagline {
-        font-size: 1.2em;
-    }
-
-    .sector-item {
-    }
-
-    .footer-grid {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-/* --- Sector Link Styling (styles_shekhawat.css) --- */
-.sector-link {
-    text-decoration: none; /* Link underline hatane ke liye */
-    color: inherit; /* Text color ko parent se inherit karne ke liye */
-    display: block; /* Poore box par click ho sake iske liye */
-    flex: 0 0 calc(20% - 24px); /* Sector item ke width ke barabar */
-    max-width: 250px;
+.card h3{
+color:#0b1f3a;
 }
 
-/* Aur yeh zaroor karein: Sector-item ko flex item banana */
-.sector-item {
-    /* Sector-item ki flex property hatakar */
-    /* flex: 0 0 calc(20% - 24px); */
-    /* Yeh properties hata dein, kyunki ab yeh parent link mein ja chuki hain. */
-    
-    /* Baki ki styling (padding, box-shadow, hover, wagera) same rahegi. */
+/* =========================
+COMPANIES
+========================= */
+
+.companies{
+background:white;
+}
+
+.company-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.company-card{
+background:#0b1f3a;
+color:white;
+padding:30px;
+border-radius:15px;
+transition:.3s;
+}
+
+.company-card:hover{
+transform:translateY(-8px);
+}
+
+.company-card h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+/* =========================
+VISION
+========================= */
+
+.vision{
+background:#f2f5fa;
+text-align:center;
+}
+
+.vision p{
+max-width:850px;
+margin:auto;
+font-size:1.15rem;
+}
+
+/* =========================
+CONTACT
+========================= */
+
+.contact{
+background:white;
+}
+
+.contact form{
+max-width:700px;
+margin:auto;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:1rem;
+}
+
+.contact textarea{
+height:160px;
+resize:none;
+}
+
+.contact button{
+background:#d4af37;
+color:#081627;
+border:none;
+padding:15px 35px;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.contact button:hover{
+opacity:.9;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+background:#081627;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+footer h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+footer p{
+margin:8px 0;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.header .container{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.hero h1{
+    font-size:2.4rem;
+}
+
+.tagline{
+    font-size:1.1rem;
+}
+
+h2{
+    font-size:1.8rem;
+}
+
+section{
+    padding:60px 0;
+}
+
 }
