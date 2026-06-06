@@ -406,4 +406,73 @@ section{
     object-fit:cover !important;
     border:6px solid #d4af37 !important;
     box-shadow:0 0 25px rgba(212,175,55,.5) !important;
+}/* =========================
+MEGA FOOTER
+========================= */
+
+.mega-footer{
+    background:#050d17;
+    color:white;
+    padding:70px 0 20px;
 }
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.footer-column h3,
+.footer-column h4{
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.footer-column p{
+    margin-bottom:10px;
+    opacity:.9;
+}
+
+.footer-column ul{
+    list-style:none;
+}
+
+.footer-column ul li{
+    margin-bottom:10px;
+}
+
+.footer-column ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-column ul li a:hover{
+    color:#d4af37;
+}
+
+.social-links{
+    margin-top:15px;
+}
+
+.social-links i{
+    font-size:22px;
+    margin-right:15px;
+    color:#d4af37;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.social-links i:hover{
+    transform:translateY(-3px);
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:50px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    opacity:.7;
+}
+
