@@ -395,4 +395,15 @@ section{
 .founder-image img:hover{
     transform:scale(1.05);
 }
+.founder-image{
+    text-align:center !important;
+}
 
+.founder-image img{
+    width:250px !important;
+    height:250px !important;
+    border-radius:50% !important;
+    object-fit:cover !important;
+    border:6px solid #d4af37 !important;
+    box-shadow:0 0 25px rgba(212,175,55,.5) !important;
+}
