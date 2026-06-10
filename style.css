@@ -355,13 +355,13 @@ section{
     background:#081627;
     padding:80px 0;
 }
-
+@media(max-width:768px){
 .stats .container{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:30px;
 }
-
+}
 .stat-box{
     text-align:center;
 }
