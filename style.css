@@ -361,7 +361,7 @@ section{
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:30px;
 }
-}
+
 .stat-box{
     text-align:center;
 }
@@ -374,7 +374,7 @@ section{
 .stat-box p{
     color:white;
     font-size:1.1rem;
-}
+}}
 /* Founder Image */
 
 .founder-image{
